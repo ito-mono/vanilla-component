@@ -1,9 +1,9 @@
-export type CardProps = {};
+import { styles } from './Card.css';
 
-export function Card({ ...props }: CardProps) {
-  return (
-    <div>
-      <img></img>
-    </div>
-  );
+export type CardProps = {
+  children: React.ReactNode;
+};
+
+export function Card({ children, ...props }: CardProps) {
+  return <div className={styles.card}>{children}</div>;
 }

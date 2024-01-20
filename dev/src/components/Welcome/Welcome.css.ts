@@ -1,26 +1,9 @@
 import { keyframes, style } from '@vanilla-extract/css';
-
-// 透明度のアニメーション
-const opacity = keyframes({
-  '0%': { opacity: 0 },
-  '100%': { opacity: 1 },
-});
-const opacityAnimation = style({
-  animationName: opacity,
-  animationDuration: '3s',
-});
-
-// 点滅のアニメーション
-const blinking = keyframes({
-  '0%': { textShadow: '0 0 20px lightyellow' },
-  '50%': { textShadow: '0 0 40px lightyellow' },
-  '100%': { textShadow: '0 0 20px lightyellow' },
-});
-const blinkingAnimation = style({
-  animationName: blinking,
-  animationDuration: '3s',
-  animationIterationCount: 'infinite',
-});
+import {
+  blinkingAnimation,
+  createAnimation,
+  opacityAnimation,
+} from '@/components/Styles/Animation.css';
 
 export const styles = {
   // 画面全体を覆うコンテナに適用するスタイル
@@ -35,15 +18,34 @@ export const styles = {
   }),
 
   // テキストを覆うコンテナに適用するスタイル
-  textWrapper: style([opacityAnimation]),
+  textWrapper: style([opacityAnimation()]),
 
   // テキストに適用するスタイル
   text: style([
     {
-      fontSize: '2rem',
+      fontSize: '3rem',
       color: 'white',
       textShadow: '0 0 30px lightyellow',
     },
-    blinkingAnimation,
+    blinkingAnimation(),
+  ]),
+
+  // リンクのコンテナに適用するスタイル
+  linksWrapper: style([
+    {
+      display: 'flex',
+      height: '20rem',
+      maxHeight: '0',
+      opacity: 0,
+    },
+    createAnimation({
+      keyframe: keyframes({
+        '0%': { opacity: 0, maxHeight: '0' },
+        '40%': { opacity: 0, maxHeight: '20rem' },
+        '100%': { opacity: 1, maxHeight: '20rem' },
+      }),
+      animationDelay: '3s',
+      animationDuration: '6s',
+    }),
   ]),
 };
