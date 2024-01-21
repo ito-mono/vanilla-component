@@ -8,9 +8,6 @@
     "type": "git",
     "url": "git+https://github.com/monoworks-develop/workflow-client.git"
   },
-  "bugs": {
-    "url": "https://github.com/monoworks-develop/workflow-client/issues"
-  },
   "main": "dist/index.js",
   "files": [
     "dist"
