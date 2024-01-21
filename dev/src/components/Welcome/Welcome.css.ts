@@ -44,8 +44,8 @@ export const styles = {
         '40%': { opacity: 0, maxHeight: '20rem' },
         '100%': { opacity: 1, maxHeight: '20rem' },
       }),
-      animationDelay: '3s',
-      animationDuration: '6s',
+      animationDelay: '2s',
+      animationDuration: '5s',
     }),
   ]),
 };
