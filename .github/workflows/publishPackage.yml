@@ -31,6 +31,6 @@ jobs:
         working-directory: dev
         run: npm run build
       - name: publish npm package
-        run: npm publish
+        run: ls -la && ls -la dist && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,6 @@
 {
   "name": "@monoworks-develop/workflow-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ワークフロー用のクライアントサイドコンポーネント",
   "author": "T.Ito",
   "license": "MIT",
