@@ -1,6 +1,6 @@
 {
   "name": "@monoworks-develop/workflow-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ワークフロー用のクライアントサイドコンポーネント",
   "author": "T.Ito",
   "license": "MIT",
@@ -12,5 +12,9 @@
     "url": "https://github.com/monoworks-develop/workflow-client/issues"
   },
   "main": "index.js",
-  "types": "index.d.ts"
+  "types": "index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
