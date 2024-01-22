@@ -1,6 +1,6 @@
 {
   "name": "@ito-mono/vanilla-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ワークフロー用のクライアントサイドコンポーネント",
   "author": "T.Ito",
   "license": "MIT",
@@ -9,11 +9,12 @@
     "url": "https://github.com/ito-mono/vanilla-component.git"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
